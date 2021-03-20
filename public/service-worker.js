@@ -1,13 +1,9 @@
-
-const FILES_TO_CACHE = 
-// ["/", "/index.html", "index.js", "/db.js", "/style.css"];
-["/",
+const FILES_TO_CACHE = ["/",
   "/index.html",
   "/assets/css/styles.css",
   "/assets/js/index.js",
   "/assets/js/db.js",
   "/manifest.webmanifest",
-   "/assets/images/icons/icon-144x144.png",
   "/assets/images/icons/icon-192x192.png",
   "/assets/images/icons/icon-512x512.png",
 ];
@@ -44,7 +40,7 @@ self.addEventListener("activate", evt => {
 
 self.addEventListener("fetch", evt => {
   if (evt.request.url.includes("/api/")) {
-    console.log("[Service Worker] Fetch(data)", evt.request.url);
+    console.log("[Service Worker] fetch(data)", evt.request.url);
 
     evt.respondWith(
       caches.open(DATA_CACHE_NAME).then( cache => {
