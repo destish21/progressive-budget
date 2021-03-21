@@ -1,11 +1,15 @@
 body {
   font-size: 120%;
   font-family: Arial;
+  background-color: lightcoral;
+
 }
 
 button, input {
   font-size: 100%;
   font-family: Arial;
+  padding: 10px;
+  text-align: center;
 }
 
 table {
@@ -33,6 +37,7 @@ tr:nth-child(even) {
 }
 
 .total {
+  margin: 30px;
   font-size: 150%;
   text-decoration: underline;
 }
@@ -48,4 +53,5 @@ tr:nth-child(even) {
   overflow: auto;
   width: 90%;
   margin: 0 auto;
+  padding: 10px;
 }
