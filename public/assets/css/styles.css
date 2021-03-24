@@ -1,7 +1,7 @@
 body {
   font-size: 120%;
   font-family: Arial;
-  /* background-color: lightcoral;   */
+  background-color: mediumaquamarine;  
 }
 
 button, input {
@@ -18,7 +18,7 @@ table {
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 10px;
 }
 
 tr:nth-child(even) {
