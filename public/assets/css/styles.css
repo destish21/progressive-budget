@@ -1,9 +1,7 @@
 body {
   font-size: 120%;
   font-family: Arial;
-  background-color: lightcoral;  
-
-
+  /* background-color: lightcoral;   */
 }
 
 button, input {
@@ -55,4 +53,9 @@ tr:nth-child(even) {
   width: 90%;
   margin: 0 auto;
   padding: 10px;
+}
+
+#myChart{
+  color: #ffff;
+  font-size: 20px;
 }
