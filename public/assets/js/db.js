@@ -1,6 +1,9 @@
 let db;
 
-const request = indexedDB.open("budget", 1);
+const request = indexedDB.open("BudgetDB", 1);
+request.onerror = event => {
+    console.log("Good Luck! " + event.target.errorCode);
+};
 
 request.onupgradeneeded = event => {
     const db = event.target.result;
@@ -11,16 +14,13 @@ request.onupgradeneeded = event => {
 
 request.onsuccess = event => {
     db = event.target.result;
-    console.log(`Successfully opened ${db}`)
+    console.log(`Successfully opened ${db.name}`)
 
     if (navigator.onLine) {
         checkDatabase();
     }
 };
 
-request.onerror = event => {
-    console.log("Good Luck! " + event.target.errorCode);
-};
 
 const saveRecord = record => {
     const transaction = db.transaction(["transaction"], "readwrite");
